@@ -3,11 +3,9 @@ import java.util.*;
 public class menu {
     public static boolean mainMenu(int start) throws Exception{
         if (start == 1){
-            System.out.println("Let's get started :)");
             return true;
         }
         else if (start == 2) {
-            System.out.println("See you next time!");
             return false;
         }
         else {
