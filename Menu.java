@@ -1,6 +1,9 @@
 package assignment;
-import java.util.*;
-import assignment.Game.*;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
 public class Menu {
     public static ArrayList<Player> players=new ArrayList<Player>();
 
@@ -20,7 +23,7 @@ public class Menu {
             gameChoice(player);
         }
         else if (start == 2) {
-            System.out.println("bvye");
+            System.out.println("Thanks for playing :)");
             printScores();
         }
         else {

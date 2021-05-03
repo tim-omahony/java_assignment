@@ -29,10 +29,11 @@ public class Game {
                 }
                 System.out.println("The coin landed on ..... *drumroll* ..... " + computerMoveCoin + "!");
                 if (playerMoveCoin.equals(computerMoveCoin)){
-                    System.out.println("You win!");
-                    player.setPoints(1);
+                    System.out.println("You win! +10 points :)");
+                    player.setPoints(10);
                 } else {
-                    System.out.println("You lost :(");
+                    System.out.println("You lost, -10 points :(");
+                    player.setPoints(-10);
                 }
             }
         }
@@ -73,10 +74,11 @@ public class Game {
                     System.out.println("It's a tie :o");
                 }
                 else if((playerMoveRps.equals("rock") && computerMove.equals("scissors")) || (playerMoveRps.equals("scissors") && computerMove.equals("paper")) || (playerMoveRps.equals("paper") && computerMove.equals("rock"))) {
-                    System.out.println("You won :)");
-                    player.setPoints(1);
+                    System.out.println("You win! +10 points :)");
+                    player.setPoints(10);
                 } else {
-                    System.out.println("You lost :(");
+                    System.out.println("You lost, -10 points :(");
+                    player.setPoints(-10);
                 }
             }
         }

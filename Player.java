@@ -1,5 +1,4 @@
 package assignment;
-import java.util.*;
 public class Player implements Comparable<Player>{
     public int points;
     public String name;
@@ -19,9 +18,7 @@ public class Player implements Comparable<Player>{
 
     @Override
     public String toString() {
-        return "Player " +
-                "points =" + points +
-                ", name ='" + name + '\'';
+        return name +"'s" +" points: " + points;
     }
 
     @Override
