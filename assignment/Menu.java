@@ -7,12 +7,6 @@ import java.util.Scanner;
 public class Menu {
     public static ArrayList<Player> players=new ArrayList<Player>();
 
-    private static void printScores(){
-        Collections.sort(players);
-        for (Player player: players) {
-            System.out.println(player.toString());
-        }
-    }
 
     public static void mainMenu(){
         Scanner input = new Scanner(System.in);
@@ -48,6 +42,14 @@ public class Menu {
         }
     }
 
+    private static void printScores(){
+        Collections.sort(players);
+        for (Player player: players) {
+            System.out.println(player.toString());
+        }
+    }
+
+
     public static Player newPlayer() {
         Scanner playerIn = new Scanner(System.in);
         System.out.print("Enter your name to start playing: ");
@@ -57,10 +59,6 @@ public class Menu {
         players.add(player);
         return player;
     }
-
-//        public int getRandArray(){
-//            return options[rand.nextInt(options.length)];
-//        }
 
     public static void main(String[] args) {
         mainMenu();

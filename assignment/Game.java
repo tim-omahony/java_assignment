@@ -32,8 +32,8 @@ public class Game {
                     System.out.println("You win! +10 points :)");
                     player.setPoints(10);
                 } else {
-                    System.out.println("You lost, -10 points :(");
-                    player.setPoints(-10);
+                    System.out.println("You lost, -2 points :(");
+                    player.setPoints(-2);
                 }
             }
         }
@@ -77,8 +77,8 @@ public class Game {
                     System.out.println("You win! +10 points :)");
                     player.setPoints(10);
                 } else {
-                    System.out.println("You lost, -10 points :(");
-                    player.setPoints(-10);
+                    System.out.println("You lost, -5 points :(");
+                    player.setPoints(-5);
                 }
             }
         }
