@@ -18,7 +18,7 @@ public class Player implements Comparable<Player>{
 
     @Override
     public String toString() {
-        return name +"'s" +" points: " + points;
+        return name +"'s points: " + points;
     }
 
     @Override

@@ -16,7 +16,7 @@ public class Menu {
 
     public static void mainMenu(){
         Scanner input = new Scanner(System.in);
-        System.out.println("Hello! Welcome to the game house thing place! Enter a selection! \n 1. Start \n 2. Quit ");
+        System.out.println("Hello! \n 1. Start \n 2. Quit ");
         int start = input.nextInt();
         if (start == 1){
             Player player = newPlayer();
