@@ -16,6 +16,10 @@ public class Player implements Comparable<Player>{
         return points;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         return name +"'s points: " + points;

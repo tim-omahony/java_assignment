@@ -10,7 +10,7 @@ public class Menu {
 
     public static void mainMenu(){
         Scanner input = new Scanner(System.in);
-        System.out.println("Hello! \n 1. Start \n 2. Quit ");
+        System.out.println("Hello! \n 1. New player \n 2. Quit ");
         int start = input.nextInt();
         if (start == 1){
             Player player = newPlayer();
@@ -28,7 +28,7 @@ public class Menu {
 
     public static void gameChoice(Player player) {
         Scanner in = new Scanner(System.in);
-        System.out.println("! Enter the game you would like to play (we only have rock paper scissors or flipping a coin atm sorry) ===== \n1. Rock paper scissors \n2. Coin flip \n3. Quit");
+        System.out.println(" ===== Enter the game you would like to play (we only have rock paper scissors or flipping a coin atm sorry) ===== \n1. Rock paper scissors \n2. Coin flip \n3. Main Menu");
         int gameNo = in.nextInt();
         if (gameNo == 1){
             Game.rockPaperScissors(player);
@@ -37,7 +37,7 @@ public class Menu {
             Game.coinFlip(player);
         }
         else if (gameNo == 3) {
-            System.out.println("See you next time :)");
+            System.out.println("See you next time " + player.getName() + " :)");
             mainMenu();
         }
     }
@@ -54,7 +54,7 @@ public class Menu {
         Scanner playerIn = new Scanner(System.in);
         System.out.print("Enter your name to start playing: ");
         String name = playerIn.next();
-        System.out.print("===== Hello " + name);
+        System.out.println("Hello " + name);
         Player player = new Player(name);
         players.add(player);
         return player;
