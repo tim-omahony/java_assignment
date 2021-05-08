@@ -8,6 +8,7 @@ public class Player implements Comparable<Player>{
         this.name = name;
     }
 
+//    this Player method is used so that scores in leaderboard.txt are not reset to 0 after every run of the program
     public Player(String name, int points) {
         this.name = name;
         this.points = points;

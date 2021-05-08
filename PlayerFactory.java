@@ -1,6 +1,9 @@
 package assignment;
+
 import java.util.Scanner;
+
 public class PlayerFactory {
+// class PlayerFactory generates new players and specifies whether they are VIP or Limited players
     public static Player build() {
         Scanner playerIn = new Scanner(System.in);
         System.out.print("Enter your name to start playing: ");
@@ -11,7 +14,7 @@ public class PlayerFactory {
 
 
     private static Player construct(String name){
-        if (name.equals("tim")){
+        if (name.equals("tim") || name.equals("paul")){
             return  new VIPPlayer(name);
         }else{
             return new LimitedPlayer(name);

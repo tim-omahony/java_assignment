@@ -1,9 +1,13 @@
 package assignment;
-import java.util.*;
+
+import java.util.Random;
+import java.util.Scanner;
+
 public class Game {
     public static void coinFlip(Player player) {
         Scanner CFin = new Scanner(System.in);
         System.out.println(" ===== Welcome to Coin Flip! ===== ");
+        //Use a while loop and only exit the loop if the user wants to quit
         while (true) {
             //Get the user's move through user input
             System.out.println("Please enter either:\nheads \ntails \nquit");
@@ -43,7 +47,6 @@ public class Game {
     public static void rockPaperScissors(Player player) {
         Scanner RPSin = new Scanner(System.in);
         System.out.println(" ===== Welcome to Rock Paper Scissors! ===== ");
-        //Use a while(true) loop and only break the loop if the user wants to quit
         while(true) {
             //Get the user's move through user input
             System.out.println("Please enter either:\nrock \npaper \nscissors \nquit");
@@ -57,13 +60,13 @@ public class Game {
             if (!playerMoveRps.equals("rock") && !playerMoveRps.equals("paper") && !playerMoveRps.equals("scissors")){
                 System.out.println("I don't think that's a move you can make in rock paper scissors my guy :/");
             }else {
-                //Get a random number in between 0 and 3 and convert it to an integer so that the possibilities are 0, 1, or 2
-                int rand = (int)(Math.random()*3);
-                //Convert the random number to a string using conditionals and print the opponent's move
+                //Get a random number in between 0 and 3 and convert it to an integer so that the possibilities are 0, 1, or 2 (rock, paper or scissors)
+                int randRPS = (int)(Math.random()*3);
+                //Convert the random number to a string using conditionals and print the computer's move
                 String computerMove = " ";
-                if(rand == 0) {
+                if(randRPS == 0) {
                     computerMove = "rock";
-                } else if(rand == 1) {
+                } else if(randRPS == 1) {
                     computerMove = "paper";
                 } else {
                     computerMove = "scissors";

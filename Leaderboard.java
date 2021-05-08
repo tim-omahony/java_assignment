@@ -18,22 +18,22 @@ public class Leaderboard {
         update(existingPlayers);
     }
 
-
+//method creates the file "leaderboard.txt" if it doesn't exist
     private static void createFile() {
         try {
             File myObj = new File(fileName);
             if (myObj.createNewFile()) {
                 System.out.println("File created: " + myObj.getName());
             } else {
-                System.out.println("File already exists.");
+                System.out.println("File already exists :/");
             }
         } catch (IOException e) {
-            System.out.println("An error occurred.");
+            System.out.println("Something went wrong :(");
             e.printStackTrace();
         }
     }
 
-
+//method updates leaderboard.txt when the player exits the program
     private static void update(ArrayList<Player> players){
         try {
             FileWriter myWriter = new FileWriter(fileName);
@@ -43,12 +43,12 @@ public class Leaderboard {
             }
             myWriter.close();
         }catch (IOException e) {
-            System.out.println("An error occurred.");
+            System.out.println("Something went wrong :(");
             e.printStackTrace();
         }
     }
 
-
+//method reads the file and outputs and adds the new players onto leaderboard.txt
     private static ArrayList<Player> readFile(){
         ArrayList<Player> players = new ArrayList<>();
         try {
@@ -62,7 +62,7 @@ public class Leaderboard {
             }
             myReader.close();
         } catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
+            System.out.println("Something went wrong :(");
             e.printStackTrace();
         }
         return players;
