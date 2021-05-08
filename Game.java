@@ -10,10 +10,10 @@ public class Game {
         System.out.println(" ===== Enter the game you would like to play (we only have rock paper scissors or flipping a coin atm sorry) ===== \n1. Rock paper scissors \n2. Coin flip \n3. Main Menu");
         int gameNo = in.nextInt();
         if (gameNo == 1){
-            Game.rockPaperScissors(player);
+            rockPaperScissors(player);
         }
         else if (gameNo == 2) {
-            Game.coinFlip(player);
+            coinFlip(player);
         }
         else if (gameNo == 3) {
             System.out.println("See you next time " + player.getName() + " :)");
