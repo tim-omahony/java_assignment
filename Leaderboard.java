@@ -10,6 +10,15 @@ import java.util.Scanner;
 
 public class Leaderboard {
     private static final String fileName = "leaderboard.txt";
+    public static void createOrUpdate(ArrayList<Player> players){
+        createFile();
+        ArrayList<Player> existingPlayers = readFile();
+        existingPlayers.addAll(players);
+        Collections.sort(existingPlayers);
+        update(existingPlayers);
+    }
+
+
     private static void createFile() {
         try {
             File myObj = new File(fileName);
@@ -23,6 +32,8 @@ public class Leaderboard {
             e.printStackTrace();
         }
     }
+
+
     private static void update(ArrayList<Player> players){
         try {
             FileWriter myWriter = new FileWriter(fileName);
@@ -37,13 +48,6 @@ public class Leaderboard {
         }
     }
 
-    public static void createOrUpdate(ArrayList<Player> players){
-        createFile();
-        ArrayList<Player> existingPlayers = readFile();
-        existingPlayers.addAll(players);
-        Collections.sort(existingPlayers);
-        update(existingPlayers);
-    }
 
     private static ArrayList<Player> readFile(){
         ArrayList<Player> players = new ArrayList<>();

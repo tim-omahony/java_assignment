@@ -9,6 +9,7 @@ public class PlayerFactory {
         return construct(name);
     }
 
+
     private static Player construct(String name){
         if (name.equals("tim")){
             return  new VIPPlayer(name);

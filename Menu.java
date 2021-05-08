@@ -27,6 +27,7 @@ public class Menu {
         }
   }
 
+
     public static void gameChoice(Player player) {
         Scanner in = new Scanner(System.in);
         System.out.println(" ===== Enter the game you would like to play (we only have rock paper scissors or flipping a coin atm sorry) ===== \n1. Rock paper scissors \n2. Coin flip \n3. Main Menu");
@@ -42,6 +43,7 @@ public class Menu {
             mainMenu();
         }
     }
+
 
     private static void printScores(){
         Collections.sort(players);

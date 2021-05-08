@@ -37,6 +37,7 @@ public class Player implements Comparable<Player>{
     }
 }
 
+
 class VIPPlayer extends Player {
     public VIPPlayer(String name) {
         super(name + " (VIP)");
@@ -44,6 +45,7 @@ class VIPPlayer extends Player {
         this.points = 10;
     }
 }
+
 
 class LimitedPlayer extends Player {
     public LimitedPlayer(String name) {

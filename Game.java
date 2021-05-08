@@ -43,9 +43,6 @@ public class Game {
     public static void rockPaperScissors(Player player) {
         Scanner RPSin = new Scanner(System.in);
         System.out.println(" ===== Welcome to Rock Paper Scissors! ===== ");
-//        if (player instanceof LimitedPlayer){
-//
-//        }
         //Use a while(true) loop and only break the loop if the user wants to quit
         while(true) {
             //Get the user's move through user input
@@ -57,7 +54,6 @@ public class Game {
                 break;
             }
 //            //Check if the user's move is valid (rock, paper, or scissors)
-//            if(!(playerMove == 1) && !(playerMove == 2) && !(playerMove == 3)){
             if (!playerMoveRps.equals("rock") && !playerMoveRps.equals("paper") && !playerMoveRps.equals("scissors")){
                 System.out.println("I don't think that's a move you can make in rock paper scissors my guy :/");
             }else {
