@@ -13,7 +13,8 @@ public class Menu {
         System.out.println("Hello! \n 1. New player \n 2. Quit ");
         int start = input.nextInt();
         if (start == 1){
-            Player player = newPlayer();
+            Player player = PlayerFactory.build();
+            players.add(player);
             gameChoice(player);
         }
         else if (start == 2) {
@@ -47,18 +48,9 @@ public class Menu {
         for (Player player: players) {
             System.out.println(player.toString());
         }
+        Leaderboard.createOrUpdate(players);
     }
 
-
-    public static Player newPlayer() {
-        Scanner playerIn = new Scanner(System.in);
-        System.out.print("Enter your name to start playing: ");
-        String name = playerIn.next();
-        System.out.println("Hello " + name);
-        Player player = new Player(name);
-        players.add(player);
-        return player;
-    }
 
     public static void main(String[] args) {
         mainMenu();

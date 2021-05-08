@@ -43,6 +43,9 @@ public class Game {
     public static void rockPaperScissors(Player player) {
         Scanner RPSin = new Scanner(System.in);
         System.out.println(" ===== Welcome to Rock Paper Scissors! ===== ");
+//        if (player instanceof LimitedPlayer){
+//
+//        }
         //Use a while(true) loop and only break the loop if the user wants to quit
         while(true) {
             //Get the user's move through user input

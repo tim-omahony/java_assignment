@@ -8,6 +8,11 @@ public class Player implements Comparable<Player>{
         this.name = name;
     }
 
+    public Player(String name, int points) {
+        this.name = name;
+        this.points = points;
+    }
+
     public void setPoints(int points) {
         this.points = this.points + points;
     }
@@ -22,12 +27,26 @@ public class Player implements Comparable<Player>{
 
     @Override
     public String toString() {
-        return name +"'s points: " + points;
+        return name +"'s points: " + points + "\n";
     }
 
     @Override
     public int compareTo(Player comparePlayer) {
         int compareScore=((Player)comparePlayer).getPoints();
         return compareScore-this.points;
+    }
+}
+
+class VIPPlayer extends Player {
+    public VIPPlayer(String name) {
+        super(name + " (VIP)");
+//      VIP players start with 10 points
+        this.points = 10;
+    }
+}
+
+class LimitedPlayer extends Player {
+    public LimitedPlayer(String name) {
+        super(name + " (Limited)");
     }
 }
