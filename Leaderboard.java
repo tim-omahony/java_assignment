@@ -25,7 +25,7 @@ public class Leaderboard {
             if (myObj.createNewFile()) {
                 System.out.println("File created: " + myObj.getName());
             } else {
-                System.out.println("File already exists :/");
+                System.out.println("File "  + fileName + " already exists. File has been updated.");
             }
         } catch (IOException e) {
             System.out.println("Something went wrong :(");

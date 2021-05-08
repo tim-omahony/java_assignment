@@ -4,6 +4,23 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
+    //method prompts the user for an input and calls different functions depending on the input
+    public static void gameChoice(Player player) {
+        Scanner in = new Scanner(System.in);
+        System.out.println(" ===== Enter the game you would like to play (we only have rock paper scissors or flipping a coin atm sorry) ===== \n1. Rock paper scissors \n2. Coin flip \n3. Main Menu");
+        int gameNo = in.nextInt();
+        if (gameNo == 1){
+            Game.rockPaperScissors(player);
+        }
+        else if (gameNo == 2) {
+            Game.coinFlip(player);
+        }
+        else if (gameNo == 3) {
+            System.out.println("See you next time " + player.getName() + " :)");
+            Menu.mainMenu();
+        }
+    }
+
     public static void coinFlip(Player player) {
         Scanner CFin = new Scanner(System.in);
         System.out.println(" ===== Welcome to Coin Flip! ===== ");
@@ -14,7 +31,7 @@ public class Game {
             String playerMoveCoin = CFin.next();
             if (playerMoveCoin.equals("quit")) {
                 System.out.println("Thanks for playing rock paper scissors :)");
-                Menu.gameChoice(player);
+                gameChoice(player);
                 break;
             }
             if (!playerMoveCoin.equals("heads") && !playerMoveCoin.equals("tails")){
@@ -53,7 +70,7 @@ public class Game {
             String playerMoveRps = RPSin.next();
             if (playerMoveRps.equals("quit")) {
                 System.out.println("Thanks for playing rock paper scissors :)");
-                Menu.gameChoice(player);
+                gameChoice(player);
                 break;
             }
 //            //Check if the user's move is valid (rock, paper, or scissors)
