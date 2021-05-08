@@ -8,7 +8,7 @@ public class Menu {
     public static ArrayList<Player> players=new ArrayList<Player>();
 
 
-    public static void mainMenu(){
+    private static void mainMenu(){
         Scanner input = new Scanner(System.in);
         System.out.println("Hello! \n 1. New player \n 2. Quit ");
         int start = input.nextInt();
