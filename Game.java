@@ -54,7 +54,9 @@ public class Game {
                 if (playerMoveRps.equals(computerMoveRPS)){
                     System.out.println("It's a tie :o");
                 }
-                else if((playerMoveRps.equals("rock") && computerMoveRPS.equals("scissors")) || (playerMoveRps.equals("scissors") && computerMoveRPS.equals("paper")) || (playerMoveRps.equals("paper") && computerMoveRPS.equals("rock"))) {
+                else if((playerMoveRps.equals("rock") && computerMoveRPS.equals("scissors")) ||
+                        (playerMoveRps.equals("scissors") && computerMoveRPS.equals("paper")) ||
+                        (playerMoveRps.equals("paper") && computerMoveRPS.equals("rock"))) {
                     System.out.println("You win! +10 points :)");
                     player.setPoints(10);
                 } else {
