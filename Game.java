@@ -8,16 +8,21 @@ public class Game {
     public static void gameChoice(Player player) {
         Scanner in = new Scanner(System.in);
         System.out.println("\n===== Enter the game you would like to play ('1', '2', or '3' to quit) we only have rock paper scissors or flipping a coin atm sorry ===== \n1. Rock paper scissors \n2. Coin flip \n3. Main Menu");
-        int gameNo = in.nextInt();
-        if (gameNo == 1){
-            rockPaperScissors(player);
-        }
-        else if (gameNo == 2) {
-            coinFlip(player);
-        }
-        else if (gameNo == 3) {
-            System.out.println("See you next time " + player.getName() + " :)");
-            Menu.mainMenu();
+        String gameNo = in.next();
+        switch (gameNo) {
+            case "1":
+                rockPaperScissors(player);
+                break;
+            case "2":
+                coinFlip(player);
+                break;
+            case "3":
+                System.out.println("See you next time " + player.getName() + " :)");
+                Menu.mainMenu();
+                break;
+            default:
+                System.out.println("Please enter either 1, 2, or 3");
+                gameChoice(player);
         }
     }
 
