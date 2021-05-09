@@ -31,6 +31,7 @@ public class Player implements Comparable<Player>{
         return name +"'s points: " + points + "\n";
     }
 
+//  compareTo method checks to see which player has the most points in order to organise them in the leaederboard
     @Override
     public int compareTo(Player comparePlayer) {
         int compareScore=(comparePlayer).getPoints();

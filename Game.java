@@ -67,6 +67,7 @@ public class Game {
                     if (totalPlayed == 5) {
                         System.out.println("You're a limited player :( you've reached your game limit for this round sorry :(");
                         Menu.mainMenu();
+                        break;
                     }
                 }
             }
@@ -113,6 +114,7 @@ public class Game {
                     if (totalPlayed == 5) {
                         System.out.println("You're a limited player :( you've reached your game limit for this round sorry :(");
                         Menu.mainMenu();
+                        break;
                     }
                 }
             }
