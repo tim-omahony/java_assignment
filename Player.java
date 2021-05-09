@@ -48,6 +48,7 @@ class VIPPlayer extends Player {
     }
 }
 
+// limited players have a limit on the number of games they can play in one round, implemented in Game.java
 
 class LimitedPlayer extends Player {
     public LimitedPlayer(String name) {
