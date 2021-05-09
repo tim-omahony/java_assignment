@@ -8,13 +8,13 @@ public class PlayerFactory {
         Scanner playerIn = new Scanner(System.in);
         System.out.print("Enter your name to start playing: ");
         String name = playerIn.next();
-        System.out.println("Hello " + name);
+        System.out.println("\nHello " + name);
         return construct(name);
     }
 
 
     private static Player construct(String name){
-        if (name.equals("tim") || name.equals("paul")){
+        if (name.equals("tim") || name.equals("Tim") || name.equals("paul") || name.equals("Paul")){
             return  new VIPPlayer(name);
         }else{
             return new LimitedPlayer(name);

@@ -48,7 +48,7 @@ public class Leaderboard {
         }
     }
 
-//method reads the file and outputs and adds the new players onto leaderboard.txt
+//method reads the file and adds the new players onto leaderboard.txt
     private static ArrayList<Player> readFile(){
         ArrayList<Player> players = new ArrayList<>();
         try {
