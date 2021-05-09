@@ -62,7 +62,7 @@ public class Game {
                 } else {
                     System.out.println("You lost, -5 points :(");
                     player.setPoints(-5);
-                //if the player is a limited player they are set a limit of 5 games for each round, after which they are sent back to the game choice screen
+                //if the player is a limited player they are set a limit of 5 games for each round, after which they are sent back to the main menu
                 }if (player instanceof LimitedPlayer){
                     totalPlayed += 1;
                     System.out.println("Games played: " + totalPlayed);
