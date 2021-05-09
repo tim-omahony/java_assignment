@@ -1,6 +1,5 @@
 package assignment;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
@@ -47,7 +46,7 @@ public class Game {
                 //Get a random number in between 0 and 3 and convert it to an integer so that the possibilities are 0, 1, or 2 (rock, paper or scissors)
                 int randRPS = (int)(Math.random()*3);
                 //Convert the random number to a string using conditionals and print the computer's move
-                String computerMoveRPS = " ";
+                String computerMoveRPS;
                 if(randRPS == 0) {
                     computerMoveRPS = "rock";
                 } else if(randRPS == 1) {
@@ -102,7 +101,7 @@ public class Game {
                 //Get a random number in between 0 and 2 and convert it to an integer so that the possibilities are 0, or 1 (heads or tails)
                 int randCoin = (int)(Math.random()*2);
                 //Convert the random number to a string using conditionals and print the result of the flip
-                String computerMoveCoin = " ";
+                String computerMoveCoin = null;
                 if(randCoin == 0) {
                     computerMoveCoin = "heads";
                 } else if(randCoin == 1) {

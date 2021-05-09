@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Menu {
 //    ArrayList is created in order to sort the players when the program finishes
-    public static ArrayList<Player> players=new ArrayList<Player>();
+    public static ArrayList<Player> players=new ArrayList<>();
 
 //method prompts user for an input and calls different functions depending on their selection
     public static void mainMenu(){
